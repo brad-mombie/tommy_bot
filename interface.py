@@ -116,7 +116,7 @@ sub_heading = tk.Label(root, text="Time for your medication: ", font=('calibri',
 sub_heading.place(x=10, y=10)
 
 # Add the '[MEDICATION]' label to the left of the 'sub_heading' label
-medication_label = tk.Label(root, text="[MEDICATION]", font=('calibri', 20, 'bold'), bg='white')
+medication_label = tk.Label(root, text="[MEDICATION]", font=('calibri', 80, 'bold'), bg='white')
 medication_label.place(x=10, y=50)
 
 root.mainloop()

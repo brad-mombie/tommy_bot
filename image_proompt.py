@@ -18,5 +18,15 @@ data = {'prompt': 'Please tell me about this medication.'}
 # Making the request
 response = requests.post(url, headers=headers, files=files, data=data)
 
-# Outputting the response
-print(response.json())
+# New troubleshooting code
+print(f'Status Code: {response.status_code}')
+print(f'Response Text: {response.text}')
+
+# Outputting the response (if it's JSON)
+if response.status_code == 200:
+    try:
+        print(response.json())
+    except Exception as e:
+        print(f'Error parsing JSON: {e}')
+else:
+    print('Request failed.')

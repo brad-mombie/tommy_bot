@@ -1,7 +1,7 @@
 import openai
 
 # Configure the OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 def send_prompt_to_gpt4(prompt_text):
     """

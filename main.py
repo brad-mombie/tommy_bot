@@ -2,7 +2,7 @@ from Arm_Lib import Arm_Device
 import threading
 import time
 
-arm.Arm_serial_servo_write(1,0,500)
+
 
 def move_arm(pos):
     arm.Arm_serial_servo_write(1, pos, 500)
@@ -20,6 +20,9 @@ def schedule_moves():
 
 # Initialize the Arm
 arm = Arm_Device()
+
+arm.Arm_serial_servo_write(1,0,500)
+time.sleep(.5)
 
 # Start the scheduled arm movements in a separate thread
 t = threading.Thread(target=schedule_moves)

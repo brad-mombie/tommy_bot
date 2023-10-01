@@ -34,7 +34,7 @@ style.map('Green.TButton',
 
 # Create the 'Okay' button using the custom style and place it at the bottom left with the specified size
 okay_button = ttk.Button(root, text="Okay", command=lambda: print("Okay pressed"), style='Green.TButton')
-okay_button.place(x=10, y=320, width=400, height=160)
+okay_button.place(x=800, y=420, width=400, height=160)
 
 # Configure the custom style for the 'Why' button with the previous increased font size
 style.configure('Yellow.TButton', 

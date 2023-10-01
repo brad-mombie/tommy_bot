@@ -1,5 +1,14 @@
 import tkinter as tk
 from tkinter import ttk
+import signal
+
+# Handler to close the tkinter window when receiving a SIGINT or SIGTERM
+def signal_handler(signum, frame):
+    root.quit()
+
+# Bind the signal handler
+signal.signal(signal.SIGINT, signal_handler)
+signal.signal(signal.SIGTERM, signal_handler)
 
 # Create the main window
 root = tk.Tk()
@@ -13,9 +22,9 @@ root.attributes("-fullscreen", True)
 # Create a style object
 style = ttk.Style()
 
-# Configure the custom style for the 'Okay' button with increased font size
+# Configure the custom style for the 'Okay' button with further increased font size
 style.configure('Green.TButton', 
-                font=('calibri', 20, 'bold'), 
+                font=('calibri', 40, 'bold'), 
                 borderwidth='4', 
                 background='light green')
 style.map('Green.TButton',
@@ -23,13 +32,13 @@ style.map('Green.TButton',
           background=[('pressed', '!disabled', 'dark green'), ('active', 'light green')]
          )
 
-# Create the 'Okay' button using the custom style and place it at the bottom left with increased size
+# Create the 'Okay' button using the custom style and place it at the bottom left with further increased size
 okay_button = ttk.Button(root, text="Okay", command=lambda: print("Okay pressed"), style='Green.TButton')
-okay_button.place(x=10, y=360, width=200, height=80)
+okay_button.place(x=10, y=240, width=400, height=160)
 
-# Configure the custom style for the 'Why' button with increased font size
+# Configure the custom style for the 'Why' button with further increased font size
 style.configure('Yellow.TButton', 
-                font=('calibri', 20, 'bold'), 
+                font=('calibri', 40, 'bold'), 
                 borderwidth='4', 
                 background='light yellow')
 style.map('Yellow.TButton',
@@ -37,8 +46,8 @@ style.map('Yellow.TButton',
           background=[('pressed', '!disabled', 'dark orange'), ('active', 'light yellow')]
          )
 
-# Create the 'Why' button using the custom style and place it at the bottom right with increased size
+# Create the 'Why' button using the custom style and place it at the bottom right with further increased size
 why_button = ttk.Button(root, text="Why", command=lambda: print("Why pressed"), style='Yellow.TButton')
-why_button.place(x=590, y=360, width=200, height=80)
+why_button.place(x=390, y=240, width=400, height=160)
 
 root.mainloop()

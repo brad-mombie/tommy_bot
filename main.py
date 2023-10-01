@@ -2,6 +2,8 @@ from Arm_Lib import Arm_Device
 import threading
 import time
 
+arm.Arm_serial_servo_write(1,0,500)
+
 def move_arm(pos):
     arm.Arm_serial_servo_write(1, pos, 500)
     time.sleep(.5)

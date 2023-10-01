@@ -112,7 +112,7 @@ why_button = ttk.Button(root, text="Why", command=lambda: print("Why pressed"), 
 why_button.place(x=800, y=660, width=800, height=320)
 
 # Add the 'sub_heading' label at the top left
-sub_heading = tk.Label(root, text="Time for your medication: ", font=('calibri', 20, 'bold'), bg='white')
+sub_heading = tk.Label(root, text="Time for your medication: ", font=('calibri', 80, 'bold'), bg='white')
 sub_heading.place(x=10, y=10)
 
 # Add the '[MEDICATION]' label to the left of the 'sub_heading' label

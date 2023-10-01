@@ -22,7 +22,7 @@ root.attributes("-fullscreen", True)
 # Create a style object
 style = ttk.Style()
 
-# Configure the custom style for the 'Okay' button with further increased font size
+# Configure the custom style for the 'Okay' button with the previous increased font size
 style.configure('Green.TButton', 
                 font=('calibri', 40, 'bold'), 
                 borderwidth='4', 
@@ -32,11 +32,11 @@ style.map('Green.TButton',
           background=[('pressed', '!disabled', 'dark green'), ('active', 'light green')]
          )
 
-# Create the 'Okay' button using the custom style and place it at the bottom left with further increased size
+# Create the 'Okay' button using the custom style and place it at the bottom left with the specified size
 okay_button = ttk.Button(root, text="Okay", command=lambda: print("Okay pressed"), style='Green.TButton')
-okay_button.place(x=10, y=240, width=400, height=160)
+okay_button.place(x=10, y=320, width=400, height=160)
 
-# Configure the custom style for the 'Why' button with further increased font size
+# Configure the custom style for the 'Why' button with the previous increased font size
 style.configure('Yellow.TButton', 
                 font=('calibri', 40, 'bold'), 
                 borderwidth='4', 
@@ -46,8 +46,16 @@ style.map('Yellow.TButton',
           background=[('pressed', '!disabled', 'dark orange'), ('active', 'light yellow')]
          )
 
-# Create the 'Why' button using the custom style and place it at the bottom right with further increased size
+# Create the 'Why' button using the custom style and place it at the bottom right with the specified size
 why_button = ttk.Button(root, text="Why", command=lambda: print("Why pressed"), style='Yellow.TButton')
-why_button.place(x=390, y=240, width=400, height=160)
+why_button.place(x=390, y=320, width=400, height=160)
+
+# Add the 'sub_heading' label at the top left
+sub_heading = tk.Label(root, text="Time for your medication: ", font=('calibri', 20, 'bold'), bg='white')
+sub_heading.place(x=10, y=10)
+
+# Add the '[MEDICATION]' label to the left of the 'sub_heading' label
+medication_label = tk.Label(root, text="[MEDICATION]", font=('calibri', 20, 'bold'), bg='white')
+medication_label.place(x=10, y=50)
 
 root.mainloop()

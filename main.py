@@ -18,6 +18,9 @@ def schedule_moves():
     time.sleep(5)  # Wait for another 30 seconds (total 90 seconds from start)
     move_arm(270)
 
+    time.sleep(5)
+    move_arm(0)
+
 # Initialize the Arm
 arm = Arm_Device()
 

@@ -48,7 +48,7 @@ style.map('Yellow.TButton',
 
 # Create the 'Why' button using the custom style and place it at the bottom right with the specified size
 why_button = ttk.Button(root, text="Why", command=lambda: print("Why pressed"), style='Yellow.TButton')
-why_button.place(x=4100, y=200, width=800, height=320)
+why_button.place(x=20, y=200, width=800, height=320)
 
 # Add the 'sub_heading' label at the top left
 sub_heading = tk.Label(root, text="Time for your medication: ", font=('calibri', 20, 'bold'), bg='white')

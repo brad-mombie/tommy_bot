@@ -12,8 +12,8 @@ signal.signal(signal.SIGTERM, signal_handler)
 
 # Create the main window
 root = tk.Tk()
-root.title("Michael, 30 mins until your next dose of Melatonin")  # Updated title
-root.geometry("800x480")
+root.title("Welcome, Michael!")  # Updated title
+root.geometry("1600x980")  # Adjusted size to fit content
 root.configure(bg='white')
 
 # Make the program run in full screen
@@ -51,7 +51,12 @@ get_assistance_button = ttk.Button(root, text="Get Assistance", command=lambda: 
 get_assistance_button.place(x=800, y=660, width=800, height=320)
 
 # Add the headline at the top left
-headline = tk.Label(root, text="Michael, 30 mins until your next dose of Melatonin", font=('calibri', 30, 'bold'), bg='white')
+headline = tk.Label(root, text="Welcome, Michael!", font=('calibri', 30, 'bold'), bg='white')
 headline.place(x=10, y=10)
+
+# Add logo
+logo = tk.PhotoImage(file="logo.png")  # Replace 'logo.png' with your file
+logo_label = tk.Label(root, image=logo, bg='white')
+logo_label.place(x=1300, y=50)  # Adjust the x and y coordinates as needed
 
 root.mainloop()

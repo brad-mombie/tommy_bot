@@ -10,13 +10,13 @@ def move_arm(pos):
 
 def schedule_moves():
     time.sleep(30)  # Wait for 30 seconds
-    move_arm(55)
+    move_arm(90)
 
     time.sleep(30)  # Wait for another 30 seconds (total 60 seconds from start)
-    move_arm(135)
+    move_arm(180)
 
     time.sleep(30)  # Wait for another 30 seconds (total 90 seconds from start)
-    move_arm(185)
+    move_arm(270)
 
 # Initialize the Arm
 arm = Arm_Device()
